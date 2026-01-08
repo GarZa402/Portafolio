@@ -581,6 +581,8 @@ const Portfolio = () => {
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">React</span>
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">HTML/CSS</span>
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">JavaScript</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Tailwind CSS</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Bootstrap</span>
                   </div>
                 </div>
 
@@ -596,12 +598,13 @@ const Portfolio = () => {
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Laravel</span>
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Node.js</span>
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">PHP</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Python</span>
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between mb-2">
-                    <span className="text-gray-300 font-semibold">Database</span>
+                    <span className="text-gray-300 font-semibold">Database/DevOps</span>
                     <span className="text-blue-400 font-bold">80%</span>
                   </div>
                   <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
@@ -610,6 +613,9 @@ const Portfolio = () => {
                   <div className="flex gap-2 mt-2 flex-wrap">
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">MySQL</span>
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Git</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">PostgreSQL</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">MongoDB</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Docker</span>
                   </div>
                 </div>
               </div>
@@ -638,19 +644,6 @@ const Portfolio = () => {
                     <ExternalLink className="text-gray-600 group-hover:text-blue-400 transition-colors" size={20} />
                   </a>
                 ))}
-              </div>
-
-              <div className="mt-8 bg-gray-800 rounded-xl p-6 border border-gray-700">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-red-500 rounded-lg">
-                    <Heart className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-2">Voluntariado</h4>
-                    <p className="text-gray-400 text-sm mb-1">Cruz Roja Colombiana</p>
-                    <p className="text-gray-500 text-xs">2021 - 2022</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
