@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Github, Linkedin, Code, Briefcase, GraduationCap, Award, Heart, ChevronRight, Menu, X, ExternalLink, ArrowUpRight, Zap, Shield, Rocket, Terminal } from 'lucide-react';
+import { Mail, Phone, Github, Linkedin, Code, Briefcase, GraduationCap, Award, Heart, ChevronRight, Menu, X, ExternalLink, ArrowUpRight, Zap, Shield, Rocket, Terminal, Target } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,6 +65,7 @@ const Portfolio = () => {
     { name: 'Cisco Cybersecurity Essentials', url: 'https://www.credly.com/badges/a6d571c3-7a07-4cf3-8bf7-70118b9a25e9/linked_in_profile' },
     { name: 'Introduction to Cybersecurity – Cisco', url: 'https://www.credly.com/badges/648fdd30-9df2-4ceb-9992-6ceb4212ee44/linked_in_profile' },
     { name: 'EF SET Inglés B2 Intermedio Alto', url: 'https://cert.efset.org/es/ojRoU7' },
+    { name: 'AWS Certified Cloud Practitioner CLF-C02 - En Proceso'},
   ];
 
   return (
@@ -252,7 +253,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="text-sm text-gray-400 uppercase tracking-widest">
-              Desarrollador Web 
+              Desarrollador Web Profesional
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
               Construyo <span className="text-blue-400">soluciones web</span> para tu futuro digital.
@@ -400,6 +401,124 @@ const Portfolio = () => {
         </div>
       </section>
 
+      <section id="habilidades" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left side - Graph style */}
+            <div 
+              data-scroll-animate 
+              id="skills-graph" 
+              className={`bg-gray-800 rounded-2xl p-8 border border-gray-700 animate-fade-left ${visibleSections.has('skills-graph') ? 'visible' : ''}`}
+            >
+              <div className="mb-6">
+                <div className="text-sm text-gray-400 mb-2">Stack Tecnológico</div>
+                <div className="text-3xl font-bold text-blue-400">Full Stack Developer</div>
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300 font-semibold">Frontend</span>
+                    <span className="text-blue-400 font-bold">90%</span>
+                  </div>
+                  <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
+                    <div className="h-full w-9/11 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+                  </div>
+                  <div className="flex gap-2 mt-2 flex-wrap">
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">React</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">HTML/CSS</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">JavaScript</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">TypeScript</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Tailwind CSS</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Bootstrap</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300 font-semibold">Backend</span>
+                    <span className="text-blue-400 font-bold">80%</span>
+                  </div>
+                  <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
+                    <div className="h-full w-4/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+                  </div>
+                  <div className="flex gap-2 mt-2 flex-wrap">
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Laravel</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Node.js</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">PHP</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Python</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Express.js</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Django</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300 font-semibold">Database / DevOps</span>
+                    <span className="text-blue-400 font-bold">75%</span>
+                  </div>
+                  <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
+                    <div className="h-full w-4/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+                  </div>
+                  <div className="flex gap-2 mt-2 flex-wrap">
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">MySQL</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Git</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">GitHub</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">PostgreSQL</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">MongoDB</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Docker</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">AWS</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">FireBase</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-300 font-semibold">Herramientas</span>
+                  </div>
+                  <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
+                    <div className="h-full w-5/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+                  </div>
+                  <div className="flex gap-2 mt-2 flex-wrap">
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Odoo</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">n8n</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">WordPress</span>
+                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Netlify</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            {/* Right side - Certifications */}
+            <div 
+              data-scroll-animate 
+              id="certifications" 
+              className={`animate-fade-right ${visibleSections.has('certifications') ? 'visible' : ''}`}
+            >
+              <h3 className="text-3xl font-bold mb-8">Certificaciones y Logros</h3>
+              <div className="space-y-4">
+                {certifications.map((cert, index) => (
+                  <a 
+                    key={index} 
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 bg-gray-800 rounded-xl p-4 border border-gray-700 hover:border-blue-500 transition-all group cursor-pointer"
+                  >
+                    <div className="p-3 bg-blue-500 rounded-lg group-hover:bg-blue-600 transition-colors">
+                      <Award className="text-white" size={20} />
+                    </div>
+                    <span className="text-gray-300 font-medium flex-1">{cert.name}</span>
+                    <ExternalLink className="text-gray-600 group-hover:text-blue-400 transition-colors" size={20} />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Cards - Numbered */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -417,6 +536,9 @@ const Portfolio = () => {
               <p className="text-gray-400 mb-6">
                 Interfaces modernas y responsivas con React, HTML5, CSS3 y JavaScript. Experiencia de usuario excepcional.
               </p>
+              <button className="text-blue-400 font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                Ver más <ArrowUpRight size={18} />
+              </button>
             </div>
 
             {/* Card 02 - Highlighted */}
@@ -432,6 +554,9 @@ const Portfolio = () => {
               <p className="text-blue-100 mb-6">
                 APIs robustas y escalables con Laravel, Node.js y PHP. Arquitecturas eficientes y seguras.
               </p>
+              <button className="text-white font-semibold flex items-center gap-2 hover:gap-4 transition-all">
+                Ver más <ArrowUpRight size={18} />
+              </button>
             </div>
 
             {/* Card 03 */}
@@ -447,6 +572,9 @@ const Portfolio = () => {
               <p className="text-gray-400 mb-6">
                 Diseño e implementación de bases de datos MySQL optimizadas. Gestión eficiente de información.
               </p>
+              <button className="text-blue-400 font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                Ver más <ArrowUpRight size={18} />
+              </button>
             </div>
           </div>
         </div>
@@ -553,102 +681,154 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="habilidades" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
+      {/* Methodology Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-950">
         <div className="max-w-7xl mx-auto">
+          <div 
+            data-scroll-animate 
+            id="methodology-header" 
+            className={`text-center mb-16 animate-on-scroll ${visibleSections.has('methodology-header') ? 'visible' : ''}`}
+          >
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              Trabajo con <span className="text-blue-400">metodologías ágiles</span>
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Desarrollo eficiente y adaptable usando las mejores prácticas de la industria
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left side - Graph style */}
+            {/* Left side - Scrum Process */}
             <div 
               data-scroll-animate 
-              id="skills-graph" 
-              className={`bg-gray-800 rounded-2xl p-8 border border-gray-700 animate-fade-left ${visibleSections.has('skills-graph') ? 'visible' : ''}`}
+              id="methodology-visual" 
+              className={`animate-fade-left ${visibleSections.has('methodology-visual') ? 'visible' : ''}`}
             >
-              <div className="mb-6">
-                <div className="text-sm text-gray-400 mb-2">Stack Tecnológico</div>
-                <div className="text-3xl font-bold text-blue-400">Full Stack Developer</div>
-              </div>
-
-              <div className="space-y-6">
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300 font-semibold">Frontend</span>
-                    <span className="text-blue-400 font-bold">90%</span>
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="p-4 bg-blue-500 rounded-xl">
+                    <Zap className="text-white" size={32} />
                   </div>
-                  <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
-                    <div className="h-full w-9/10 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
-                  </div>
-                  <div className="flex gap-2 mt-2 flex-wrap">
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">React</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">HTML/CSS</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">JavaScript</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Tailwind CSS</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Bootstrap</span>
+                  <div>
+                    <h3 className="text-3xl font-bold text-blue-400">SCRUM</h3>
+                    <p className="text-gray-400">Framework Ágil</p>
                   </div>
                 </div>
 
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300 font-semibold">Backend</span>
-                    <span className="text-blue-400 font-bold">85%</span>
+                {/* Scrum Cycle */}
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                      1
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Sprint Planning</h4>
+                      <p className="text-sm text-gray-400">Planificación y definición de objetivos</p>
+                    </div>
                   </div>
-                  <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
-                    <div className="h-full w-4/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
-                  </div>
-                  <div className="flex gap-2 mt-2 flex-wrap">
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Laravel</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Node.js</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">PHP</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Python</span>
-                  </div>
-                </div>
 
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-300 font-semibold">Database/DevOps</span>
-                    <span className="text-blue-400 font-bold">80%</span>
+                  <div className="flex items-center gap-4 bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                      2
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Daily Standups</h4>
+                      <p className="text-sm text-gray-400">Sincronización diaria del equipo</p>
+                    </div>
                   </div>
-                  <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
-                    <div className="h-full w-4/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+
+                  <div className="flex items-center gap-4 bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                      3
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Sprint Review</h4>
+                      <p className="text-sm text-gray-400">Revisión y demostración de resultados</p>
+                    </div>
                   </div>
-                  <div className="flex gap-2 mt-2 flex-wrap">
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">MySQL</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Git</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">PostgreSQL</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">MongoDB</span>
-                    <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Docker</span>
+
+                  <div className="flex items-center gap-4 bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                      4
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">Retrospective</h4>
+                      <p className="text-sm text-gray-400">Mejora continua del proceso</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right side - Certifications */}
+            {/* Right side - Benefits */}
             <div 
               data-scroll-animate 
-              id="certifications" 
-              className={`animate-fade-right ${visibleSections.has('certifications') ? 'visible' : ''}`}
+              id="methodology-benefits" 
+              className={`space-y-6 animate-fade-right ${visibleSections.has('methodology-benefits') ? 'visible' : ''}`}
             >
-              <h3 className="text-3xl font-bold mb-8">Certificaciones y Logros</h3>
-              <div className="space-y-4">
-                {certifications.map((cert, index) => (
-                  <a 
-                    key={index} 
-                    href={cert.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 bg-gray-800 rounded-xl p-4 border border-gray-700 hover:border-blue-500 transition-all group cursor-pointer"
-                  >
-                    <div className="p-3 bg-blue-500 rounded-lg group-hover:bg-blue-600 transition-colors">
-                      <Award className="text-white" size={20} />
+              <div>
+                <h3 className="text-3xl font-bold mb-6">Beneficios de trabajar ágil</h3>
+                <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+                  Implemento metodologías ágiles para garantizar entregas iterativas, comunicación constante y adaptabilidad ante cambios en los requisitos del proyecto.
+                </p>
+              </div>
+
+              <div className="grid gap-4">
+                <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all group">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-blue-500/10 rounded-lg">
+                      <Target className="text-blue-400" size={24} />
                     </div>
-                    <span className="text-gray-300 font-medium flex-1">{cert.name}</span>
-                    <ExternalLink className="text-gray-600 group-hover:text-blue-400 transition-colors" size={20} />
-                  </a>
-                ))}
+                    <div>
+                      <h4 className="font-bold text-white mb-2">Entregas Incrementales</h4>
+                      <p className="text-gray-400 text-sm">Resultados tangibles en cada sprint con feedback constante</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all group">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-blue-500/10 rounded-lg">
+                      <Zap className="text-blue-400" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white mb-2">Flexibilidad y Adaptación</h4>
+                      <p className="text-gray-400 text-sm">Capacidad de ajustar prioridades según necesidades del cliente</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all group">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-blue-500/10 rounded-lg">
+                      <Shield className="text-blue-400" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white mb-2">Calidad Continua</h4>
+                      <p className="text-gray-400 text-sm">Pruebas y validación en cada iteración del desarrollo</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all group">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-blue-500/10 rounded-lg">
+                      <Code className="text-blue-400" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white mb-2">Colaboración Efectiva</h4>
+                      <p className="text-gray-400 text-sm">Comunicación transparente y trabajo en equipo constante</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Skills Section */}
+      
 
       {/* CTA Section */}
       <section id="contacto" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -697,7 +877,7 @@ const Portfolio = () => {
               <Phone className="text-blue-400" size={24} />
               <div className="text-left">
                 <div className="text-sm text-gray-400">Teléfono</div>
-                <div className="text-white font-semibold group-hover:text-blue-400 transition-colors">300 714 5281</div>
+                <div className="text-white font-semibold group-hover:text-blue-400 transition-colors"> +57 3007145281</div>
               </div>
             </a>
 
@@ -745,7 +925,7 @@ const Portfolio = () => {
           </div>
 
           <p className="text-gray-500 text-sm mt-8">
-            💙 Respuesta en menos de 24 horas • Medellín, Colombia
+            💙 Respuesta en menos de 24 horas • Basado en Medellín, Colombia
           </p>
           </div>
         </div>
