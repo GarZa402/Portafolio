@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Github, Linkedin, Code, Briefcase, GraduationCap, Award, Heart, ChevronRight, Menu, X, ExternalLink, ArrowUpRight, Zap, Shield, Rocket, Terminal, Target } from 'lucide-react';
+import {
+  Mail, Phone, Github, Linkedin, Code, Briefcase, GraduationCap,
+  Award, ChevronRight, Menu, X, ExternalLink, ArrowUpRight,
+  Zap, Shield, Rocket, Terminal, Target
+} from 'lucide-react';
+
+// Importamos nuestras funciones personalizadas
+import { initGA, trackPageView, trackEvent } from './analytics';
+
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
   const [visibleSections, setVisibleSections] = useState(new Set());
+
+  useEffect(() => {
+  initGA();
+  trackPageView(window.location.pathname);
+}, []);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,12 +57,14 @@ const Portfolio = () => {
   }, []);
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
+  }
+};
+
+
 
   const navItems = [
     { id: 'inicio', label: 'Inicio' },
@@ -178,6 +194,7 @@ const Portfolio = () => {
                 href="https://www.linkedin.com/in/juanjgarciav"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent('Outbound', 'Click', 'LinkedIn')}
                 className="text-gray-300 hover:text-blue-400 transition-colors"
               >
                 <Linkedin size={20} />
@@ -186,6 +203,7 @@ const Portfolio = () => {
                 href="https://github.com/GarZa402"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent('Outbound', 'Click', 'GitHub')}
                 className="text-gray-300 hover:text-blue-400 transition-colors"
               >
                 <Github size={20} />
@@ -224,6 +242,7 @@ const Portfolio = () => {
                   href="https://www.linkedin.com/in/juanjgarciav"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackEvent('Outbound', 'Click', 'LinkedIn')}
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   <Linkedin size={24} />
@@ -232,6 +251,7 @@ const Portfolio = () => {
                   href="https://github.com/GarZa402"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackEvent('Outbound', 'Click', 'GitHub')}
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   <Github size={24} />
@@ -279,7 +299,9 @@ const Portfolio = () => {
 
             <div className="flex items-center gap-4 pt-4">
               <button
-                onClick={() => scrollToSection('proyectos')}
+                onClick={() => {
+                  trackEvent('CTA', 'Click', 'Ver Proyectos');
+                  scrollToSection('proyectos');}}
                 className="px-8 py-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold transition-all shadow-lg hover:shadow-blue-500/50 flex items-center gap-2"
               >
                 <ArrowUpRight size={20} />
@@ -289,6 +311,7 @@ const Portfolio = () => {
                 href="https://github.com/GarZa402"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent('Outbound', 'Click', 'GitHub')}
                 className="px-6 py-4 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg font-semibold transition-all flex items-center gap-2"
               >
                 <Github size={20} />
@@ -313,6 +336,7 @@ const Portfolio = () => {
                       href="https://github.com/GarZa402" 
                       target="_blank" 
                       rel="noopener noreferrer"
+                      onClick={() => trackEvent('Outbound', 'Click', 'GitHub')}
                       className="flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300 transition-colors"
                     >
                       <Github size={16} />
@@ -632,6 +656,7 @@ const Portfolio = () => {
                 href="https://github.com/GarZa402/SalleConnect"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent('Outbound', 'Click', 'SalleConnect GitHub')}
                 className="inline-flex items-center gap-2 text-blue-400 font-semibold group-hover:gap-4 transition-all"
               >
                 <Github size={20} />
@@ -670,6 +695,7 @@ const Portfolio = () => {
                 href="https://github.com/GarZa402/Attendo"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent('Outbound', 'Click', 'Attendo GitHub')}
                 className="inline-flex items-center gap-2 text-blue-400 font-semibold group-hover:gap-4 transition-all"
               >
                 <Github size={20} />
@@ -861,6 +887,7 @@ const Portfolio = () => {
           <div className="grid sm:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
             <a
               href="mailto:juanjosegarcia756@gmail.com"
+              onClick={() => trackEvent('contact', 'Click', 'Email')}
               className="flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-750 border border-gray-700 hover:border-blue-500 rounded-xl p-6 transition-all group"
             >
               <Mail className="text-blue-400" size={24} />
@@ -872,6 +899,7 @@ const Portfolio = () => {
 
             <a
               href="tel:3007145281"
+              onClick={() => trackEvent('contact', 'Click', 'phone')}
               className="flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-750 border border-gray-700 hover:border-blue-500 rounded-xl p-6 transition-all group"
             >
               <Phone className="text-blue-400" size={24} />
@@ -885,6 +913,7 @@ const Portfolio = () => {
               href="https://www.linkedin.com/in/juanjgarciav"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('Outbound', 'Click', 'LinkedIn')}
               className="flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-750 border border-gray-700 hover:border-blue-500 rounded-xl p-6 transition-all group"
             >
               <Linkedin className="text-blue-400" size={24} />
@@ -899,6 +928,7 @@ const Portfolio = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:juanjosegarcia756@gmail.com"
+              onClick={() => trackEvent('Outbound', 'Click', 'Email')}
               className="px-10 py-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-bold text-lg transition-all shadow-lg shadow-blue-500/50 hover:shadow-blue-500/75 inline-flex items-center justify-center gap-2"
             >
               <Rocket size={24} />
@@ -908,6 +938,7 @@ const Portfolio = () => {
               href="https://www.linkedin.com/in/juanjgarciav"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('Outbound', 'Click', 'LinkedIn')}
               className="px-10 py-4 bg-blue-600 hover:bg-blue-700 border border-blue-500 rounded-lg font-bold text-lg transition-all inline-flex items-center justify-center gap-2"
             >
               <Linkedin size={24} />
@@ -917,6 +948,7 @@ const Portfolio = () => {
               href="https://github.com/GarZa402"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('Outbound', 'Click', 'GitHub')}
               className="px-10 py-4 bg-gray-800 hover:bg-gray-750 border border-gray-700 hover:border-blue-500 rounded-lg font-bold text-lg transition-all inline-flex items-center justify-center gap-2"
             >
               <Github size={24} />
@@ -939,13 +971,13 @@ const Portfolio = () => {
               © 2026 Juan José García Villegas. Todos los derechos reservados.
             </div>
             <div className="flex gap-6">
-              <a href="https://github.com/GarZa402" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="https://github.com/GarZa402" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('Outbound', 'Click', 'GitHub')} className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/juanjgarciav" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="https://www.linkedin.com/in/juanjgarciav" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('Outbound', 'Click', 'LinkedIn')} className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:juanjosegarcia756@gmail.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="mailto:juanjosegarcia756@gmail.com" onClick={() => trackEvent('Outbound', 'Click', 'Email')} className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Mail size={20} />
               </a>
             </div>
