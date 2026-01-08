@@ -253,7 +253,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="text-sm text-gray-400 uppercase tracking-widest">
-              Desarrollador Web Profesional
+              Desarrollador Web Junior
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
               Construyo <span className="text-blue-400">soluciones web</span> para tu futuro digital.
