@@ -417,9 +417,6 @@ const Portfolio = () => {
               <p className="text-gray-400 mb-6">
                 Interfaces modernas y responsivas con React, HTML5, CSS3 y JavaScript. Experiencia de usuario excepcional.
               </p>
-              <button className="text-blue-400 font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
-                Ver más <ArrowUpRight size={18} />
-              </button>
             </div>
 
             {/* Card 02 - Highlighted */}
@@ -435,9 +432,6 @@ const Portfolio = () => {
               <p className="text-blue-100 mb-6">
                 APIs robustas y escalables con Laravel, Node.js y PHP. Arquitecturas eficientes y seguras.
               </p>
-              <button className="text-white font-semibold flex items-center gap-2 hover:gap-4 transition-all">
-                Ver más <ArrowUpRight size={18} />
-              </button>
             </div>
 
             {/* Card 03 */}
@@ -453,9 +447,6 @@ const Portfolio = () => {
               <p className="text-gray-400 mb-6">
                 Diseño e implementación de bases de datos MySQL optimizadas. Gestión eficiente de información.
               </p>
-              <button className="text-blue-400 font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
-                Ver más <ArrowUpRight size={18} />
-              </button>
             </div>
           </div>
         </div>
@@ -761,7 +752,7 @@ const Portfolio = () => {
           </div>
 
           <p className="text-gray-500 text-sm mt-8">
-            💙 Respuesta en menos de 24 horas • Basado en Medellín, Colombia
+            💙 Respuesta en menos de 24 horas • Medellín, Colombia
           </p>
           </div>
         </div>
