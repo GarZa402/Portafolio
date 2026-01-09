@@ -348,16 +348,14 @@ const Portfolio = () => {
                     <div className="flex items-center gap-3">
                       <Code className="text-blue-400" size={20} />
                       <div className="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
-                        <div className="h-full w-4/5 bg-blue-400 rounded-full"></div>
+                        <div className="h-full w-5/5 bg-blue-400 rounded-full"></div>
                       </div>
-                      <span className="text-sm text-blue-400">80%</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Terminal className="text-blue-400" size={20} />
                       <div className="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
-                        <div className="h-full w-9/10 bg-blue-400 rounded-full"></div>
+                        <div className="h-full w-5/5 bg-blue-400 rounded-full"></div>
                       </div>
-                      <span className="text-sm text-blue-400">90%</span>
                     </div>
                   </div>
                   <button 
