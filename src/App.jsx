@@ -443,10 +443,9 @@ const Portfolio = () => {
                 <div>
                   <div className="flex justify-between mb-2">
                     <span className="text-gray-300 font-semibold">Frontend</span>
-                    <span className="text-blue-400 font-bold">90%</span>
                   </div>
                   <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
-                    <div className="h-full w-9/11 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+                    <div className="h-full w-5/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
                   </div>
                   <div className="flex gap-2 mt-2 flex-wrap">
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">React</span>
@@ -461,10 +460,9 @@ const Portfolio = () => {
                 <div>
                   <div className="flex justify-between mb-2">
                     <span className="text-gray-300 font-semibold">Backend</span>
-                    <span className="text-blue-400 font-bold">80%</span>
                   </div>
                   <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
-                    <div className="h-full w-4/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+                    <div className="h-full w-5/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
                   </div>
                   <div className="flex gap-2 mt-2 flex-wrap">
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">Laravel</span>
@@ -479,10 +477,9 @@ const Portfolio = () => {
                 <div>
                   <div className="flex justify-between mb-2">
                     <span className="text-gray-300 font-semibold">Database / DevOps</span>
-                    <span className="text-blue-400 font-bold">75%</span>
                   </div>
                   <div className="h-3 bg-gray-900 rounded-full overflow-hidden">
-                    <div className="h-full w-4/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+                    <div className="h-full w-5/5 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
                   </div>
                   <div className="flex gap-2 mt-2 flex-wrap">
                     <span className="text-xs bg-gray-900 px-2 py-1 rounded text-gray-400">MySQL</span>
@@ -621,7 +618,7 @@ const Portfolio = () => {
               Proyectos <span className="text-blue-400">destacados</span> en producción.
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Soluciones reales implementadas para usuarios y empresas
+              Soluciones reales diseñadas para usuarios y empresas
             </p>
           </div>
 
@@ -957,7 +954,7 @@ const Portfolio = () => {
           </div>
 
           <p className="text-gray-500 text-sm mt-8">
-            💙 Respuesta en menos de 24 horas • Basado en Medellín, Colombia
+            💙 Respuesta en menos de 24 horas • Medellín, Colombia
           </p>
           </div>
         </div>
