@@ -615,7 +615,7 @@ const Portfolio = () => {
             className={`text-center mb-16 animate-on-scroll ${visibleSections.has('projects-header') ? 'visible' : ''}`}
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Proyectos <span className="text-blue-400">destacados</span> en producción.
+              Proyectos <span className="text-blue-400">destacados</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               Soluciones reales diseñadas para usuarios y empresas
